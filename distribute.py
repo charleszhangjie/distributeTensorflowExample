@@ -66,7 +66,7 @@ def main(_):
                                        global_step=global_step)
 
 
-      init_op = tf.initialize_all_variables()
+      init_op = tf.global_variables_initializer()
       
       saver = tf.train.Saver()
       tf.summary.scalar('cost', loss_value)
